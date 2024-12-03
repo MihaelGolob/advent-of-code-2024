@@ -1,0 +1,186 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
+      "Day01/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Day01.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Day01.dll": {}
+        }
+      },
+      "Day02/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Day02.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Day02.dll": {}
+        }
+      },
+      "Day03/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Day03.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Day03.dll": {}
+        }
+      },
+      "Day04/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Day04.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Day04.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
+    "Day01/1.0.0": {
+      "type": "project",
+      "path": "../Day01/Day01.csproj",
+      "msbuildProject": "../Day01/Day01.csproj"
+    },
+    "Day02/1.0.0": {
+      "type": "project",
+      "path": "../Day02/Day02.csproj",
+      "msbuildProject": "../Day02/Day02.csproj"
+    },
+    "Day03/1.0.0": {
+      "type": "project",
+      "path": "../Day03/Day03.csproj",
+      "msbuildProject": "../Day03/Day03.csproj"
+    },
+    "Day04/1.0.0": {
+      "type": "project",
+      "path": "../Day04/Day04.csproj",
+      "msbuildProject": "../Day04/Day04.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Day01 >= 1.0.0",
+      "Day02 >= 1.0.0",
+      "Day03 >= 1.0.0",
+      "Day04 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\MihaelGolob\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\RunDay\\RunDay.csproj",
+      "projectName": "RunDay",
+      "projectPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\RunDay\\RunDay.csproj",
+      "packagesPath": "C:\\Users\\MihaelGolob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\RunDay\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\MihaelGolob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day01\\Day01.csproj": {
+              "projectPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day01\\Day01.csproj"
+            },
+            "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day02\\Day02.csproj": {
+              "projectPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day02\\Day02.csproj"
+            },
+            "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day03\\Day03.csproj": {
+              "projectPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day03\\Day03.csproj"
+            },
+            "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day04\\Day04.csproj": {
+              "projectPath": "C:\\Users\\MihaelGolob\\Documents\\private\\advent-of-code-2024\\Day04\\Day04.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

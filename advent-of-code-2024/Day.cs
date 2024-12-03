@@ -1,0 +1,5 @@
+﻿namespace AdventOfCode;
+
+class Day {
+    
+}

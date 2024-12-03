@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RunDay/1.0.0": {
+        "dependencies": {
+          "Day01": "1.0.0",
+          "Day02": "1.0.0",
+          "Day03": "1.0.0",
+          "Day04": "1.0.0"
+        },
+        "runtime": {
+          "RunDay.dll": {}
+        }
+      },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Day01/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "runtime": {
+          "Day01.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Day02/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "runtime": {
+          "Day02.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Day03/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "runtime": {
+          "Day03.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Day04/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "runtime": {
+          "Day04.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RunDay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day01/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day02/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day03/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day04/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
