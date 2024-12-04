@@ -1,4 +1,4 @@
 secrets.txt
 
-RunDay/bin/
-RunDay/obj/
+**/bin/
+**/obj/
