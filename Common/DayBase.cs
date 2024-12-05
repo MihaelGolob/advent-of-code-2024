@@ -1,9 +1,8 @@
 ﻿public abstract class DayBase
 {
+    protected abstract int DayIndex();
     public abstract string RunPart1();
     public abstract string RunPart2();
-    
-    protected abstract int DayIndex();
     
     protected string GetInput() {
         var url = $"https://adventofcode.com/2024/day/{DayIndex().ToString()}/input";
