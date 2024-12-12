@@ -94,9 +94,9 @@ public class Day06 : DayBase
         return 6;
     }
     
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var (map, position) = ParseInput(GetInput());
+        var (map, position) = ParseInput(GetInput(stopwatch));
         var orientation = 0; // up 0 right 1 down 2 left 3
         var visitedPositions = new HashSet<(int, int)>();
 
@@ -110,9 +110,9 @@ public class Day06 : DayBase
         return visitedPositions.Count.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var (map, position) = ParseInput(GetInput());
+        var (map, position) = ParseInput(GetInput(stopwatch));
 
         var count = 0;
         for (var i = 0; i < map.Count; i++)

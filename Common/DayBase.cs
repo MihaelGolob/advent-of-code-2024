@@ -1,10 +1,11 @@
 ﻿public abstract class DayBase
 {
     protected abstract int DayIndex();
-    public abstract string RunPart1();
-    public abstract string RunPart2();
+    public abstract string RunPart1(System.Diagnostics.Stopwatch stopwatch);
+    public abstract string RunPart2(System.Diagnostics.Stopwatch stopwatch);
     
-    protected string GetInput() {
+    protected string GetInput(System.Diagnostics.Stopwatch stopwatch) {
+        stopwatch.Stop();
         var url = $"https://adventofcode.com/2024/day/{DayIndex().ToString()}/input";
 
         var sessionIdFile = File.ReadAllLines("secrets.txt");
@@ -21,6 +22,7 @@
             }
         }
 
+        stopwatch.Start();
         return response;
     }
 }

@@ -5,11 +5,11 @@ public class Day13 : DayBase {
         return 13;
     }
 
-    public override string RunPart1() {
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch) {
         return "";
     }
 
-    public override string RunPart2() {
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch) {
         return "";
     }
 }

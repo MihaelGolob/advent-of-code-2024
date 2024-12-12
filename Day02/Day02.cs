@@ -40,17 +40,17 @@ public class Day02 : DayBase
         return true;
     }
    
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = ParseInput(GetInput());
+        var input = ParseInput(GetInput(stopwatch));
         var numSafeReports = input.Count(IsReportSafe);
 
         return numSafeReports.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = ParseInput(GetInput());
+        var input = ParseInput(GetInput(stopwatch));
         var numSafeReports = 0;
 
         foreach (var report in input)

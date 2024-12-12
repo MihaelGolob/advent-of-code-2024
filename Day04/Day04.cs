@@ -42,9 +42,9 @@ public class Day04 : DayBase
         return FindWord(grid, word, x + _rowDir[direction], y + _colDir[direction], direction, index + 1);
     }
     
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var grid = ParseInput(GetInput());
+        var grid = ParseInput(GetInput(stopwatch));
         var sum = 0;
         
         for (int i = 0; i < grid.Count; i++)
@@ -61,9 +61,9 @@ public class Day04 : DayBase
         return sum.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var grid = ParseInput(GetInput());
+        var grid = ParseInput(GetInput(stopwatch));
         var sum = 0;
         
         for (int i = 0; i < grid.Count; i++)

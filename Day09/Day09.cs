@@ -39,9 +39,9 @@ public class Day09 : DayBase
         return output;
     }
 
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var diskMap = ParseInput(GetInput());
+        var diskMap = ParseInput(GetInput(stopwatch));
         int backIndex = diskMap.Count - 1;
         long checkSum = 0;
 
@@ -81,9 +81,9 @@ public class Day09 : DayBase
         return null;
     }
     
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var diskMap = ParseInput2(GetInput());
+        var diskMap = ParseInput2(GetInput(stopwatch));
         var rearranged = new List<(int id, int num, bool wasMoved)>();
 
         for (int i = 0; i < diskMap.Count; i++)

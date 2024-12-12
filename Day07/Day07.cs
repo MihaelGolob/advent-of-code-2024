@@ -79,9 +79,9 @@ public class Day07 : DayBase
         return output;
     }
 
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = ParseInput(GetInput());
+        var input = ParseInput(GetInput(stopwatch));
         long sum = 0;
 
         foreach (var equation in input)
@@ -95,9 +95,9 @@ public class Day07 : DayBase
         return sum.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = ParseInput(GetInput());
+        var input = ParseInput(GetInput(stopwatch));
         long sum = 0;
 
         foreach (var equation in input)

@@ -6,9 +6,9 @@ public class Day01 : DayBase {
 
     private string demoInput = "3   4\n4   3\n2   5\n1   3\n3   9\n3   3";
     
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = GetInput();
+        var input = GetInput(stopwatch);
 
         var left = new List<int>();
         var right = new List<int>();
@@ -35,9 +35,9 @@ public class Day01 : DayBase {
         return sum.ToString();
     }
     
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var input = GetInput();
+        var input = GetInput(stopwatch);
 
         var left = new List<int>();
         var right = new List<int>();

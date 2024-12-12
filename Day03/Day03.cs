@@ -12,12 +12,12 @@ public class Day03 : DayBase
         return 3;
     }
     
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
         var pattern = @"mul\((\d{1,3}),(\d{1,3})\)";
         var reg = new Regex(pattern);
 
-        var matches = reg.Matches(GetInput());
+        var matches = reg.Matches(GetInput(stopwatch));
 
         var sum = 0;
         foreach (Match match in matches)
@@ -33,12 +33,12 @@ public class Day03 : DayBase
         return sum.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
         var pattern = @"(mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\))";
         var reg = new Regex(pattern);
 
-        var matches = reg.Matches(GetInput());
+        var matches = reg.Matches(GetInput(stopwatch));
 
         var sum = 0;
         var enabled = true;

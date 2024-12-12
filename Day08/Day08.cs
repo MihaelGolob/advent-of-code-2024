@@ -97,9 +97,9 @@ public class Day08 : DayBase
         return x >= 0 && x < gridWidth && y >= 0 && y < gridHeight;
     }
 
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var map = ParseInput(GetInput());
+        var map = ParseInput(GetInput(stopwatch));
         var uniqueAntiNodes = new HashSet<(int x, int y)>();
 
         foreach (var freq in map.Keys)
@@ -120,9 +120,9 @@ public class Day08 : DayBase
         return uniqueAntiNodes.Count.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var map = ParseInput(GetInput());
+        var map = ParseInput(GetInput(stopwatch));
         var uniqueAntiNodes = new HashSet<(int x, int y)>();
 
         foreach (var freq in map.Keys)

@@ -77,9 +77,9 @@ public class Day05 : DayBase
         return true;
     }
     
-    public override string RunPart1()
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch)
     {
-        var (rules, updates) = ParseInput(GetInput());
+        var (rules, updates) = ParseInput(GetInput(stopwatch));
 
         var orderedUpdates = new List<int>();
         for (int i = 0; i < updates.Count; i++)
@@ -108,9 +108,9 @@ public class Day05 : DayBase
         return sum.ToString();
     }
 
-    public override string RunPart2()
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch)
     {
-        var (rules, updates) = ParseInput(GetInput());
+        var (rules, updates) = ParseInput(GetInput(stopwatch));
 
         var orderedUpdates = new List<int>();
         for (int i = 0; i < updates.Count; i++)

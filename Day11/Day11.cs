@@ -62,8 +62,8 @@ public class Day11 : DayBase {
         return temp;
     }
 
-    public override string RunPart1() {
-        var stones = ParseInput(GetInput());
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch) {
+        var stones = ParseInput(GetInput(stopwatch));
         var numBlinks = 25;
 
         for (var i = 0; i < numBlinks; i++) {
@@ -73,8 +73,8 @@ public class Day11 : DayBase {
         return stones.Count.ToString();
     }
 
-    public override string RunPart2() {
-        var stones = ParseInput(GetInput());
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch) {
+        var stones = ParseInput(GetInput(stopwatch));
         var numBlinks = 75;
 
         long sum = 0;

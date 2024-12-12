@@ -106,8 +106,8 @@ public class Day12 : DayBase {
         return count;
     }
     
-    public override string RunPart1() {
-        var map = ParseInput(GetInput());
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch) {
+        var map = ParseInput(GetInput(stopwatch));
         var regions = DetectRegions(map);
 
         long cost = 0;
@@ -122,8 +122,8 @@ public class Day12 : DayBase {
         return cost.ToString();
     }
 
-    public override string RunPart2() {
-        var map = ParseInput(GetInput());
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch) {
+        var map = ParseInput(GetInput(stopwatch));
         var regions = DetectRegions(map);
 
         long cost = 0;

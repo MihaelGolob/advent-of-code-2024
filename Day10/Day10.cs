@@ -87,8 +87,8 @@ public class Day10 : DayBase {
         return count;
     }
 
-    public override string RunPart1() {
-        var grid = ParseInput(GetInput());
+    public override string RunPart1(System.Diagnostics.Stopwatch stopwatch) {
+        var grid = ParseInput(GetInput(stopwatch));
         var legalMoves = new List<Point>([new Point(-1, 0), new Point(1, 0), new Point(0, 1), new Point(0, -1)]);
 
         var sum = 0;
@@ -104,8 +104,8 @@ public class Day10 : DayBase {
         return sum.ToString();
     }
 
-    public override string RunPart2() {
-        var grid = ParseInput(GetInput());
+    public override string RunPart2(System.Diagnostics.Stopwatch stopwatch) {
+        var grid = ParseInput(GetInput(stopwatch));
         var legalMoves = new List<Point>([new Point(-1, 0), new Point(1, 0), new Point(0, 1), new Point(0, -1)]);
 
         var sum = 0;
