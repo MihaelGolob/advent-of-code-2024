@@ -81,13 +81,28 @@ public class Day12 : DayBase {
 
         return count;
     }
-
-    private bool IsSameRegion(List<List<char>> map, (int x, int y) point, int xOff, int yOff) {
-        return IsInBounds(map, point.x + xOff, point.y + yOff) && map[point.y + yOff][point.x + xOff] == map[point.y][point.x];
-    }
     
     private long CalculateRegionSides(List<List<char>> map, List<(int x, int y)> region) {
         long count = 0;
+        var regionPlot = map[region[0].y][region[0].x];
+
+        bool IsInRegion(int x, int y) {
+            return IsInBounds(map, x, y) && map[y][x] == regionPlot;
+        }
+
+        foreach (var plot in region) {
+            // outer corners
+            if (!IsInRegion(plot.x - 1, plot.y) && !IsInRegion(plot.x, plot.y - 1)) count++;
+            if (!IsInRegion(plot.x + 1, plot.y) && !IsInRegion(plot.x, plot.y - 1)) count++;
+            if (!IsInRegion(plot.x - 1, plot.y) && !IsInRegion(plot.x, plot.y + 1)) count++;
+            if (!IsInRegion(plot.x + 1, plot.y) && !IsInRegion(plot.x, plot.y + 1)) count++;
+            // inner corners
+            if (IsInRegion(plot.x - 1, plot.y) && IsInRegion(plot.x, plot.y - 1) && !IsInRegion(plot.x - 1, plot.y - 1)) count++;
+            if (IsInRegion(plot.x + 1, plot.y) && IsInRegion(plot.x, plot.y - 1) && !IsInRegion(plot.x + 1, plot.y - 1)) count++;
+            if (IsInRegion(plot.x - 1, plot.y) && IsInRegion(plot.x, plot.y + 1) && !IsInRegion(plot.x - 1, plot.y + 1)) count++;
+            if (IsInRegion(plot.x + 1, plot.y) && IsInRegion(plot.x, plot.y + 1) && !IsInRegion(plot.x + 1, plot.y + 1)) count++;
+        }
+        
         return count;
     }
     
@@ -108,7 +123,7 @@ public class Day12 : DayBase {
     }
 
     public override string RunPart2() {
-        var map = ParseInput(DemoInput1);
+        var map = ParseInput(GetInput());
         var regions = DetectRegions(map);
 
         long cost = 0;
@@ -116,7 +131,7 @@ public class Day12 : DayBase {
             var region = regions[i];
             var area = CalculateRegionArea(region);
             var sides = CalculateRegionSides(map, region);
-            Console.WriteLine($"region {i}/{regions.Count}: area: {area}, sides: {sides}");
+            // Console.WriteLine($"region {i}/{regions.Count}: area: {area}, sides: {sides}");
             cost += area * sides;
         }
         
