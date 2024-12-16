@@ -80,7 +80,7 @@ public class Day15 : DayBase {
         var sum = 0;
         for (int i = 0; i < map.Count; i++) {
             for (int j = 0; j < map[0].Count; j++) {
-                if (map[i][j] == 'O') sum += 100 * i + j;
+                if (map[i][j] == 'O' || map[i][j] == '[') sum += 100 * i + j;
             }
         }
 
@@ -119,7 +119,7 @@ public class Day15 : DayBase {
         if (map[position.y][position.x] == '#') return false;
         
         if (map[position.y][position.x] == '[')
-            return IsClear(map, (position.x, position.y + direction), direction) && IsClear(map, (position.x - 1, position.y - direction), direction);
+            return IsClear(map, (position.x, position.y + direction), direction) && IsClear(map, (position.x + 1, position.y + direction), direction);
         return IsClear(map, (position.x, position.y + direction), direction) && IsClear(map, (position.x - 1, position.y + direction), direction);
     }
 
@@ -146,7 +146,7 @@ public class Day15 : DayBase {
     }
 
     public override string RunPart2(Stopwatch stopwatch) {
-        var (map, position, moves) = ParseInput2(DemoInput2);
+        var (map, position, moves) = ParseInput2(GetInput(stopwatch));
 
         foreach (var move in moves) {
             (int x, int y) direction = GetDirection(move);
@@ -171,18 +171,21 @@ public class Day15 : DayBase {
 
                 if (IsClear(map, tempPosition, direction.y)) {
                     MoveBoxes(map, tempPosition, direction.y, '.');
+                    position = (position.x + direction.x, position.y + direction.y);
                 }
             }
         }
         
-        for (int i = 0; i < map.Count; i++) {
-            for (int j = 0; j < map[0].Count; j++) {
-                Console.Write(map[i][j]);
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-        Console.WriteLine();
+        // map[position.y][position.x] = '@';
+        // for (int i = 0; i < map.Count; i++) {
+        //     for (int j = 0; j < map[0].Count; j++) {
+        //         Console.Write(map[i][j]);
+        //     }
+        //     Console.WriteLine();
+        // }
+        // Console.WriteLine();
+        // Console.WriteLine();
+        // map[position.y][position.x] = '.';
 
         return CalculateGpsSum(map).ToString();
     }
