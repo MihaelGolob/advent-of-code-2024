@@ -67,7 +67,7 @@ public class Day17 : DayBase {
                     }
                     break;
                 case 4:
-                    b = b ^ c;
+                    b ^= c;
                     break;
                 case 5:
                     output.Add(GetComboOperand(operand) % 8);
@@ -94,7 +94,7 @@ public class Day17 : DayBase {
     }
 
     public override string RunPart2(Stopwatch stopwatch) {
-        var (registers, program) = ParseInput(GetInput(stopwatch));
+        var (registers, program) = ParseInput(DemoInput2);
 
         List<long> Evaluate(long a) {
             return SimulateProgram([a, 0, 0], program);
