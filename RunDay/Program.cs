@@ -1,4 +1,4 @@
-﻿var day = new Day19.Day19(); 
+﻿var day = new Day20.Day20(); 
 
 var watch1 = System.Diagnostics.Stopwatch.StartNew();
 var result1 = day.RunPart1(watch1);
